@@ -22,7 +22,6 @@ async def ble_send(cmd):
         print("❌ Robot non connecté")
 
 def send(cmd):
-    # Envoyer la commande dans la loop qui tourne en arrière-plan
     asyncio.run_coroutine_threadsafe(ble_send(cmd), loop)
 
 # --- Tkinter GUI ---
