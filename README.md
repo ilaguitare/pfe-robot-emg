@@ -97,8 +97,10 @@ You’ll find it in your ESP32 code — it’s the UUID used when creating the w
   BLECharacteristic::PROPERTY_WRITE
    );
 - Use the same UUID in your Python script:
-```cpp
+```python
 CHARACTERISTIC_UUID = "6E400002-B5A3-F393-E0A9-E50E24DCCA9E"
+```
+---
 
 ### 💻 Connecting via Python Script (Bleak + Tkinter)
 
@@ -107,4 +109,15 @@ To control the robot from your computer, use the provided **Python interface**.
 #### Requirements:
 ```bash
 pip install bleak tk
-
+```
+#### Usage: 
+1. Power on the robot (ESP32C3).
+2. Run the Python script:
+```python
+python mini_voiture_BLE_linux.py
+```
+3. Wait for the message:
+```python
+✅ Connected to the robot
+```
+4. Use the on-screen buttons to send movement commands via BLE. The program uses Bleak for asynchronous BLE communication and Tkinter for the GUI.
