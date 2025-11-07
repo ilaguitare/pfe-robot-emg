@@ -43,3 +43,43 @@ This allows direct BLE communication without needing a computer.
 - **Cross-platform compatibility**: works on Linux, Windows, and Android  
 
 ---
+### 📱 Connecting the Robot via nRF Connect
+
+You can control or test the robot directly from your smartphone using the **nRF Connect** app (available for Android and iOS).
+
+#### Steps to connect:
+
+1. **Open nRF Connect** on your phone.  
+2. Make sure **Bluetooth is enabled** and your **robot (ESP32)** is powered on.  
+3. In the app, press **"Scan"** to search for nearby BLE devices.  
+4. Look for a device named similar to `"ESP32"` or the custom name defined in your code (for example `"MiniCar"`).  
+5. Tap **"Connect"**.  
+6. Once connected, you’ll see a list of **GATT Services and Characteristics**.  
+   - Find the service with UUID:  
+     `4fafc201-1fb5-459e-8fcc-c5c9c331914b`  
+   - Inside it, locate the **Characteristic UUID**:  
+     `beb5483e-36e1-4688-b7f5-ea07361b26a8`  
+7. Select this characteristic, tap **"Write"**, choose **"TEXT"**, and send one of the movement commands:
+   - `F` → Forward  
+   - `B` → Backward  
+   - `L` → Turn left  
+   - `R` → Turn right  
+   - `S` → Stop  
+
+You should see the robot respond immediately.
+
+---
+
+### 🔍 Finding the BLE Addresses
+
+#### 1. **ROBOT_ADDRESS**
+
+This is the **MAC address** of your ESP32 BLE device.  
+You can find it using one of the following methods:
+
+- **With nRF Connect:**  
+  After scanning, look under the device name — it will appear as something like  
+  `24:EC:4A:CE:3F:D6`  
+  Copy that value and set it as:  
+  ```python
+  ROBOT_ADDRESS = "24:EC:4A:CE:3F:D6"
