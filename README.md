@@ -83,3 +83,8 @@ You can find it using one of the following methods:
   Copy that value and set it as:  
   ```python
   ROBOT_ADDRESS = "24:EC:4A:CE:3F:D6"
+- **From Arduino Serial Monitor:** 
+  Add this line in your ESP32 setup to print the address at startup:
+  ```python
+  Serial.println(BLEDevice::getAddress().toString().c_str());
+
