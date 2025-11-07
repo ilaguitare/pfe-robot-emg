@@ -31,7 +31,6 @@ class MyServerCallbacks : public BLEServerCallbacks {
 
 class MyCallbacks : public BLECharacteristicCallbacks {
   void onWrite(BLECharacteristic *pCharacteristic) {
-    // getValue() retourne déjà un String Arduino
     command = pCharacteristic->getValue(); 
     if (command.length() > 0) {
       Serial.print("Commande reçue: ");
