@@ -4,6 +4,8 @@
 |----------------------------------------------|----------------------------------------------|
 | ![Image 3](mini_voiture/images/DSC_2791.JPG) | ![Image 4](mini_voiture/images/DSC_2793.JPG) |
 
+# Robot
+
 ## Materials
 - XIAO ESP32C3  
 - L9110S motor driver  
@@ -121,3 +123,7 @@ python mini_voiture_BLE_linux.py
 ✅ Connected to the robot
 ```
 4. Use the on-screen buttons to send movement commands via BLE. The program uses Bleak for asynchronous BLE communication and Tkinter for the GUI.
+
+
+# EMG Sensor
+
