@@ -1,5 +1,6 @@
 # Build your own mini robot and control it with your arm using muscle contractions (EMG sensor)
 
+# Please check demonstration video [here](https://drive.google.com/file/d/1pHbkurVnzyjyLbcKID13A9m6qOWxy2dj/view?usp=drive_link)
 | ![Image 1](mini_voiture/images/DSC_2789.JPG) | ![Image 2](mini_voiture/images/DSC_2790.JPG) |
 |----------------------------------------------|----------------------------------------------|
 | ![Image 3](mini_voiture/images/DSC_2791.JPG) | ![Image 4](mini_voiture/images/DSC_2793.JPG) |
